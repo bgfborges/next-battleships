@@ -2,6 +2,8 @@
 
 A project where you with your beloved girl (or guy) can decide the future choirs or boring activities with fun and love. This project goals to be only a portfolio as NodeJS and React developer.
 
+The project in live here - <a href="https://next-love-naval-battle-bgfborges.vercel.app/"> Acess - https://next-love-naval-battle-bgfborges.vercel.app/</a>
+
 <ol>
     <li>Love Naval Battle (Game)</li>
     <li>Login just front-end with Google OAuth</li>
