@@ -23,9 +23,12 @@ export const config = {
 }
 
 const relevantEvents = new Set([
-    'checkout.session.completed'
+    'checkout.session.completed',
+    'customer.subscription.updated',
+    'customer.subscription.deleted'
 ])
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default async  (req: NextApiRequest, res: NextApiResponse) => {
     
     if( req.method === 'POST' ){
@@ -44,10 +47,22 @@ export default async  (req: NextApiRequest, res: NextApiResponse) => {
         const { type } = event
 
         if(relevantEvents.has(type)){
-            console.log('evento recebido', event)
 
             try {
                 switch (type) {
+
+                    case 'customer.subscription.updated':
+                    case 'customer.subscription.deleted':
+
+                        const subscription = event.data.object as Stripe.Subscription;
+
+                        await saveSubscription(
+                            subscription.id,
+                            subscription.customer.toString(),
+                            false
+                        )
+
+                        break;
 
                     case 'checkout.session.completed':
 
@@ -55,7 +70,8 @@ export default async  (req: NextApiRequest, res: NextApiResponse) => {
 
                         await saveSubscription(
                             checkoutSession.subscription.toString(),
-                            checkoutSession.customer.toString()
+                            checkoutSession.customer.toString(),
+                            true
                         )
 
                         break;

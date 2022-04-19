@@ -33,7 +33,8 @@ STRUCTURAL FUNDAMENTALS:
     <li>Hooks</li>
     <li>Contexts</li>
     <li>Routes</li>
-    <li>CSS</li>
+    <li>SCSS</li>
+    <li>JAMStack</li>
 </ol>
 
 ADVANCED FUNDAMENTALS
