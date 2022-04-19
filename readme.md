@@ -4,8 +4,6 @@ A project where you with your beloved girl (or guy) can decide the future choirs
 
 The project in live here - <a href="https://next-love-naval-battle-bgfborges.vercel.app/"> Acess - https://next-love-naval-battle-bgfborges.vercel.app/</a>
 
-
-
 <ol>
     <li>Love Naval Battle (Game)</li>
     <li>Login just front-end with Google OAuth</li>
