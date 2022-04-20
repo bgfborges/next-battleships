@@ -5,20 +5,28 @@ import { BsFillChatLeftQuoteFill } from 'react-icons/bs'
 import { Credits } from "../components/Credits"
 import { SubscribeButton } from '../components/SubscribeButton'
 import { GitHubOpenSourceButton } from '../components/GitHubOpenSourceButton'
+import { GetStaticProps } from "next"
 import { stripe } from "../services/stripe"
-import { GetStaticProps } from "next/types"
 
-export default function Home({ product }){
+interface HomeProps {
+  product: {
+    priceId: string;
+    amount: number;
+  }
+}
+
+export default function Home({product}: HomeProps){
+
   return (
     <>
       <Head><title>Play Battle Field - A Love Community</title></Head>
-      <Container img="/images/background-spotted.jpeg">
+      <Container img="/images/background-image.jpeg">
           <Content>
               <InfoHomeContainer>
                   <div>
                       <h3><FaHandSpock />Hey, welcome!</h3>
-                      <h1>Share <span>Your Story</span> Anonymously.</h1>
-                      <h2><BsFillChatLeftQuoteFill /><i>Share anything from your stories with others</i>.</h2>
+                      <h1>Meet <span>New People</span> <br />around the World.</h1>
+                      <h2><BsFillChatLeftQuoteFill /><i>Talk to people around the whole world</i>.</h2>
                       <p><span>All the services with an unique subscription of { product.amount } monthly</span>.</p>
                       <SubscribeButton />
                       <GitHubOpenSourceButton />

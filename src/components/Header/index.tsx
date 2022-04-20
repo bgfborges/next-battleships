@@ -18,6 +18,7 @@ export function Header(){
                 <ul>
                     <ActiveLink path="/">Home</ActiveLink>
                     <ActiveLink path="/spotted-info">Spotted Love</ActiveLink>
+                    <ActiveLink path="/meet">Meet People</ActiveLink>
                     <ActiveLink path="/games">Games</ActiveLink>
                     <ActiveLink path="/posts">Posts</ActiveLink>
                 </ul>
