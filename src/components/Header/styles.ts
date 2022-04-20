@@ -91,32 +91,38 @@ export const Container = styled.header`
                 align-items: center;
                 justify-content: center;
                 position: relative;
-                opacity: 0.9;
-                transition: 0.2ms opacity;
 
-                & + li {
-                    margin-left: 2rem;
+                a {
+                    display: block;
+                    opacity: 0.9;
+                    transition: 0.2ms opacity;
+                    color: white;
+                    text-decoration: none;
+
+                    & + li {
+                        margin-left: 2rem;
+                    }
                 }
 
                 &:hover {
-                    opacity: 1;
-                    font-weight: 500;
-                }
+                        opacity: 1;
+                        font-weight: 500;
+                    }
 
-                &.active {
-                    opacity: 1;
-                    font-weight: 500;
-                }
+                    &.active {
+                        opacity: 1;
+                        font-weight: 500;
+                    }
 
-                &.active::after{
-                    content: '';
-                    height: 3px;
-                    background: var(--red);
-                    width: 90%;
-                    position: absolute;
-                    bottom: 1px;
-                    border-radius: 20px 20px 0 0;
-                }
+                    &.active::after{
+                        content: '';
+                        height: 3px;
+                        background: var(--red);
+                        width: 90%;
+                        position: absolute;
+                        bottom: 1px;
+                        border-radius: 20px 20px 0 0;
+                    }
             }
         }
     }

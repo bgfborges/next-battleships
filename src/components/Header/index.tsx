@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Container, MenuSide, MenuContent } from './styles';
 import { FcGoogle } from 'react-icons/fc';
-import { RiCloseCircleFill } from 'react-icons/ri';
 import { signIn, useSession, signOut } from 'next-auth/react'
+import Link from 'next/link';
+import Img from 'next/image'
+import { ActiveLink } from '../ActiveLink';
 
 export function Header(){
 
@@ -14,8 +16,10 @@ export function Header(){
             <div>
                 <img src="/images/battleship-simple.png" alt="Logo Battleship" />
                 <ul>
-                    <li className="active">Home</li>
-                    <li>Spotted Love</li>
+                    <ActiveLink path="/">Home</ActiveLink>
+                    <ActiveLink path="/spotted-info">Spotted Love</ActiveLink>
+                    <ActiveLink path="/games">Games</ActiveLink>
+                    <ActiveLink path="/posts">Posts</ActiveLink>
                 </ul>
             </div>
             <div>

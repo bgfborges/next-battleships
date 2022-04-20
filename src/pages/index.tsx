@@ -25,9 +25,9 @@ export default function Home({product}: HomeProps){
               <InfoHomeContainer>
                   <div>
                       <h3><FaHandSpock />Hey, welcome!</h3>
-                      <h1>Play the <span>Love</span> Battleships.</h1>
+                      <h1>Play the <span>Love</span> Multigames.</h1>
                       <h2><BsFillChatLeftQuoteFill /><i>Win to Refuse the Boring Actitivies with your Beloved</i>.</h2>
-                      <p><span>It cost the donation you desire after { product.amount }</span>.</p>
+                      <p><span>It cost just { product.amount } monthly</span>.</p>
                       <SubscribeButton />
                       <GitHubOpenSourceButton />
                   </div>
