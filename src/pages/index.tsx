@@ -26,7 +26,7 @@ export default function Home({product}: HomeProps){
                   <div>
                       <h3><FaHandSpock />Hey, welcome!</h3>
                       <h1>Play the <span>Love</span> Multigames.</h1>
-                      <h2><BsFillChatLeftQuoteFill /><i>Win to Refuse the Boring Actitivies with your Beloved</i>.</h2>
+                      <h2><BsFillChatLeftQuoteFill /><i>Win to Decide the Actitivies with your Beloved</i>.</h2>
                       <p><span>All the services with an unique subscription of { product.amount } monthly</span>.</p>
                       <SubscribeButton />
                       <GitHubOpenSourceButton />
@@ -43,7 +43,7 @@ export default function Home({product}: HomeProps){
 
 export const getStaticProps: GetStaticProps = async () => {
 
-  const price = await stripe.prices.retrieve('price_1Kn6bYCVHbWovL3pf5Doym0s');
+  const price = await stripe.prices.retrieve(process.env.STRIPE_DEFAULT_PRICE);
 
   const product = {
     priceId: price.id,
