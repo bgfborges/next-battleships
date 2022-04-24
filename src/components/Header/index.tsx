@@ -19,7 +19,6 @@ export function Header(){
                     <ActiveLink path="/">Home</ActiveLink>
                     <ActiveLink path="/spotted-info">Spotted Love</ActiveLink>
                     <ActiveLink path="/meet">Meet People</ActiveLink>
-                    <ActiveLink path="/games">Games</ActiveLink>
                     <ActiveLink path="/posts">Posts</ActiveLink>
                 </ul>
             </div>
@@ -33,10 +32,11 @@ export function Header(){
                         <MenuSide>
                             <MenuContent show={showMenu}>
                                 <ul>
-                                    <li><a>Start New Game</a></li>
+                                    <li><Link href="/games"><a>Start New Game</a></Link></li>
+                                    <li><Link href="/meet/community"><a>Community</a></Link></li>
                                     <li><a>Profile</a></li>
                                     <li><a>Friends</a></li>
-                                    <li onClick={ () => signOut() }><a>Sair</a></li>
+                                    <li onClick={ () => signOut() }><a>Logout</a></li>
                                 </ul>
                             </MenuContent>
                         </MenuSide>

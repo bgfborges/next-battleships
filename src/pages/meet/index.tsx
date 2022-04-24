@@ -1,12 +1,12 @@
 import Head from "next/head"
-import { Container, InfoHomeContainer, ImageHomeContainer, Content } from '../styles/homeStyles'
+import { Container, InfoHomeContainer, ImageHomeContainer, Content } from '../../styles/homeStyles'
 import { FaHandSpock } from 'react-icons/fa'
 import { BsFillChatLeftQuoteFill } from 'react-icons/bs'
-import { Credits } from "../components/Credits"
-import { SubscribeButton } from '../components/SubscribeButton'
-import { GitHubOpenSourceButton } from '../components/GitHubOpenSourceButton'
+import { Credits } from "../../components/Credits"
+import { SubscribeButton } from '../../components/SubscribeButton'
+import { GitHubOpenSourceButton } from '../../components/GitHubOpenSourceButton'
 import { GetStaticProps } from "next"
-import { stripe } from "../services/stripe"
+import { stripe } from "../../services/stripe"
 
 interface HomeProps {
   product: {

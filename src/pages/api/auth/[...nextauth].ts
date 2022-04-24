@@ -55,7 +55,7 @@ export default NextAuth({
 
       async signIn({ user }){
 
-        const { email } = user
+        const { email, name } = user
 
         try {
 
@@ -71,7 +71,10 @@ export default NextAuth({
               ),
               q.Create(
                 q.Collection('users'),
-                { data: {email}}
+                { data: {
+                  email,
+                  name,
+                }}
               ),
               q.Get(
                 q.Match(
